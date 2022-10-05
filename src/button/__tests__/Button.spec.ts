@@ -1,0 +1,42 @@
+import Button from '../Button'
+import { shallowMount } from '@vue/test-utils'
+import { describe, expect, test } from 'vitest'
+
+// 测试分组
+describe('Button', () => {
+  // mount
+  test('组件挂载', () => {
+    const wrapper = shallowMount(Button, {
+      slots: {
+        default: 'Button',
+      },
+    })
+    // 断言
+    expect(wrapper.text()).toBe('Button')
+  })
+})
+
+describe('color', () => {
+  test('default', () => {
+    const wrapper = shallowMount(Button, {
+      slots: {
+        default: 'Button',
+      },
+    })
+    const classArr = wrapper.classes().map((v) => v.replace('\n', ''))
+    expect(classArr.includes('bg-blue-500')).toBe(true)
+  })
+
+  test('red', () => {
+    const wrapper = shallowMount(Button, {
+      slots: {
+        default: 'Button',
+      },
+      props: {
+        color: 'red',
+      },
+    })
+    const classArr = wrapper.classes().map((v) => v.replace('\n', ''))
+    expect(classArr.includes('bg-red-500')).toBe(true)
+  })
+})
