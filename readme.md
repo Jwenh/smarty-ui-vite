@@ -1,11 +1,11 @@
 # 待优化
 1. 文档自定义组件，显示demo和代码切换
 2. 引入组件库，进行二次封装
-3. githubPage  和workflow 配置自动部署更新文档
-4. 组件测试挂载库变更（改为@testing-library/vue，官方更推荐）
+3. githubPage配置  和workflow 配置ci部署更新文档
+4. 组件测试挂载库变更（改为@testing-library/vue，官方更推荐）,生成测试报告
 5. git仓库 分支保护
-6. stylelint配置
-7. 私服配置， changelog配置
+6. 私服配置， changelog配置
+7. unocss 在iife模式下打包失败，考虑使用tailwindCss替换（生态好，文档健全，下载活跃度高）
 
 # 已实现
 1. vitepress 文档建设
@@ -14,9 +14,9 @@
 4. 单元测试 vitest+@vue/test-utils
 5. 代码规范化（eslint+prettier）
 6. commit格式化 （husky+commitlint+lint-staged）
+7. GitHub Action验证，在代码变更的时候及时反映状态（防止开发环境不同，有人升级了依赖库，或者强推了代码，需要自动验证是否通过，通过会带上ci passing徽章）
 
 # commit提交规范
-type：commit 的类型；
 feat：新功能、新特性；
 fix: 修改 bug；
 perf：更改代码，以提高性能；
@@ -65,10 +65,19 @@ image.png
 组件代码： 大驼峰；
 测试用例代码 ： 测试对象名+ .spec.ts。
 
-# 工具推荐
+# 待学习
 1.mrm（https://mrm.js.org/）
 2. 资料库 （https://qiyoe.cn/code/front-end/lint/commitizen.html）
 3. pnpm 文档 （https://www.pnpm.cn/configuring）
+4. npm 文档（https://docs.npmjs.com/）
+5. vue全家桶文档（vue3+ts+vitest+pina+vuerouter+vuex+vueUtilTest）
+6. tailwindCss文档（https://www.tailwindcss.cn/）
 
-#规划
+# 规划
 1.开发cli工具项目模板
+
+# 填坑
+## unocss 打包异常，提示 "does not found CSS placeholder in the generated chunks"
+解决方案 https://github.com/unocss/unocss/issues/1341 
+1.使用了lib模式打包， package.json 添加 type:module配置即可
+2. 打包格式去除iife格式打包

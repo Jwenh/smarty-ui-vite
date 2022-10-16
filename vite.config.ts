@@ -2,17 +2,20 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import Unocss from './config/unocss'
+import { resolve } from 'path'
 export default defineConfig({
   plugins: [vue(), vueJsx(), Unocss()],
   build: {
-    minify: false, //代码混淆
+    minify: true, //代码混淆
+    sourcemap: true, //单独输出sourcemap文件
+    // brotliSize: true, //生成压缩大小报告
+    cssCodeSplit: false, //css是否分开打包，false则为一个style.css
     lib: {
-      entry: './src/entry.ts',
+      entry: resolve(__dirname, './src/entry.ts'),
       name: 'SmartyUI',
       fileName: 'smarty-ui', //包名文件，默认是package.json的name
-      // formats: ['es', 'umd', 'iife'] //打包多格式文件
+      formats: ['es', 'umd'], //打包多格式文件
     },
-    cssCodeSplit: false, //css是否分开打包，false则为一个style.css
     rollupOptions: {
       external: ['vue', 'vue-router'], //提取为外部依赖，不打包进去
       output: {
@@ -20,6 +23,11 @@ export default defineConfig({
           vue: 'Vue', //umd,iife模式下为外部依赖提供全局变量
         },
       },
+    },
+  },
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src'),
     },
   },
   test: {

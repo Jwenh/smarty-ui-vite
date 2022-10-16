@@ -1,4 +1,5 @@
 import { defineComponent, PropType } from 'vue'
+// import 'uno.css'
 
 export type IColor =
   | 'black'
@@ -20,7 +21,6 @@ export type Icons =
   | 'add'
   | 'share'
   | ''
-const a = '12'
 
 export const props = {
   color: {
@@ -52,11 +52,7 @@ export default defineComponent({
     m-1
     `}
       >
-        {props.icon !== '' ? (
-          <i class={`i-ic-baseline-${props.icon} p-3`}></i>
-        ) : (
-          ''
-        )}
+        {props.icon !== '' ? <i class={`i-ic-baseline-${props.icon} p-3`}></i> : ''}
         {slots.default ? slots.default() : '按钮'}
       </button>
     )
