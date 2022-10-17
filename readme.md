@@ -1,10 +1,10 @@
 # 待优化
 1. 文档自定义组件，显示demo和代码切换
 2. 引入组件库，进行二次封装
-3. githubPage配置  和workflow 配置ci部署更新文档
-4. 组件测试挂载库变更（改为@testing-library/vue，官方更推荐）,生成测试报告
+3. workflow 重新配置（GitHubPage和GitHub Action配置），自动部署文档和自动执行单元测试
+4. 完善组件测试工作,生成测试报告
 5. git仓库 分支保护
-6. 私服配置， changelog配置
+6. 私服配置， changelog版本更改日志配置
 7. unocss 在iife模式下打包失败，考虑使用tailwindCss替换（生态好，文档健全，下载活跃度高）
 8. 不用umd格式， pageage.json和跟目录配置文件.cjs 替换（用module是兼容unocss的打包失败，考虑替换掉）
 
