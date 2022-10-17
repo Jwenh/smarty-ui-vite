@@ -25,5 +25,6 @@ export default defineConfig({
       // 添加DemoBlock插槽
       // md.use(demoBlockPlugin)
     }
-  }
+  },
+  outDir:'../public'
 })

@@ -6,6 +6,7 @@
 5. git仓库 分支保护
 6. 私服配置， changelog配置
 7. unocss 在iife模式下打包失败，考虑使用tailwindCss替换（生态好，文档健全，下载活跃度高）
+8. 不用umd格式， pageage.json和跟目录配置文件.cjs 替换（用module是兼容unocss的打包失败，考虑替换掉）
 
 # 已实现
 1. vitepress 文档建设
@@ -72,6 +73,7 @@ image.png
 4. npm 文档（https://docs.npmjs.com/）
 5. vue全家桶文档（vue3+ts+vitest+pina+vuerouter+vuex+vueUtilTest）
 6. tailwindCss文档（https://www.tailwindcss.cn/）
+7. githubPage和gitlabPage文档配置（https://vitepress.vuejs.org/guide/deploying）
 
 # 规划
 1.开发cli工具项目模板
