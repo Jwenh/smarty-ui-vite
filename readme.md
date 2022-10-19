@@ -1,3 +1,10 @@
+# Smarty-UI
+<p align='center'>
+    <a href="https://github.com/Jwenh/smarty-ui-vite/blob/master/.github/workflows/master.yml">
+        <img src='https://github.com/Jwenh/smarty-ui-vite/blob/master/.github/workflows/master.yml/badge.svg?branch=master' alt='CI' style='max-width:100%' />
+    </a>
+</p>
+
 # 待优化
 1. 文档自定义组件，显示demo和代码切换
 2. 引入组件库，进行二次封装
