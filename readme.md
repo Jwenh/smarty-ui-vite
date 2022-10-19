@@ -1,14 +1,12 @@
 # Smarty-UI
-<p align='center'>
-    <a href="https://github.com/Jwenh/smarty-ui-vite/blob/master/.github/workflows/master.yml">
-        <img src='https://github.com/Jwenh/smarty-ui-vite/blob/master/.github/workflows/master.yml/badge.svg?branch=master' alt='CI' style='max-width:100%' />
-    </a>
+<p align="center">
+    <a href="https://github.com/Jwenh/smarty-ui-vite/actions/workflows/master.yml"><img src="https://github.com/Jwenh/smarty-ui-vite/actions/workflows/master.yml/badge.svg?branch=master" alt="CI" style="max-width: 100%;"></a>
 </p>
 
 # 待优化
 1. 文档自定义组件，显示demo和代码切换
 2. 引入组件库，进行二次封装
-3. workflow 重新配置（GitHubPage和GitHub Action配置），自动部署文档和自动执行单元测试
+3. workflow 重新配置（GitHubPage和GitHub Action配置），自动部署文档和自动执行单元测试 (参考：https://github.com/codes-templates/npm-react)
 4. 完善组件测试工作,生成测试报告
 5. git仓库 分支保护
 6. 私服配置， changelog版本更改日志配置
