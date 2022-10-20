@@ -6,7 +6,7 @@
 # 待优化
 1. 文档自定义组件，显示demo和代码切换
 2. 引入组件库，进行二次封装
-3. workflow 重新配置（GitHubPage和GitHub Action配置），自动部署文档和自动执行单元测试 (参考：https://github.com/codes-templates/npm-react)
+3. workflow 配置（GitHubPage和CI构建配置），自动部署文档和自动发包 (参考：https://github.com/codes-templates/npm-react)
 4. 完善组件测试工作,生成测试报告
 5. git仓库 分支保护
 6. 私服配置， changelog版本更改日志配置
