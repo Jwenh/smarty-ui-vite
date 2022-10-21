@@ -8,8 +8,8 @@
 2. 引入组件库，进行二次封装
 3. workflow 配置（GitHubPage和CI构建配置），自动部署文档和自动发包 (参考：https://github.com/codes-templates/npm-react)
 4. 完善组件测试工作,生成测试报告
-5. git仓库 分支保护
-6. 私服配置， changelog版本更改日志配置
+5. git仓库 分支保护（master只能mr进去，mr时自动构建版本和文档）
+6. 私服配置， changelog日志配置（release-it插件，借鉴小程序组件配置）
 7. unocss 在iife模式下打包失败，考虑使用tailwindCss替换（生态好，文档健全，下载活跃度高）
 8. 不用umd格式， pageage.json和跟目录配置文件.cjs 替换（用module是兼容unocss的打包失败，考虑替换掉）
 
@@ -84,7 +84,9 @@ image.png
 1.开发cli工具项目模板
 
 # 填坑
-## unocss 打包异常，提示 "does not found CSS placeholder in the generated chunks"
+## 1 unocss 打包异常，提示 "does not found CSS placeholder in the generated chunks"
 解决方案 https://github.com/unocss/unocss/issues/1341 
 1.使用了lib模式打包， package.json 添加 type:module配置即可
 2. 打包格式去除iife格式打包
+## 2 执行项目sh文件
+需要在git bash 界面（git操作界面）运行sh命令：(1) sh publish.sh   (2) ./publish.sh  都可以执行
